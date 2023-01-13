@@ -1,0 +1,28 @@
+@import '_var';
+
+.banner {
+    background-color: #111;
+
+    .content-navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+
+
+        &-list {
+            padding: $fs3;
+            transition: all .15s;
+
+            &:hover {
+                transform: scale(1.1);
+        
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import '_var';
+
+.link, .paragraph {
+    letter-spacing: 1.5px;
+}
+
+.link {
+    color: $cls-pri;
+    font-size: $fs2;
+    text-decoration: none;
+
+    &:active {
+        color: $cls-sec;
+    }
+}
+
+.paragraph {
+    line-height: $fs1;
+    text-indent: $fs3;
+    border: 1px solid #eef;
+    padding:1rem;
+    margin: 1rem auto;
+}
