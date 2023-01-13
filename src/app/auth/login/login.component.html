@@ -1,0 +1,46 @@
+<div class="wrap">
+
+    <form 
+        name="form" 
+        #f="ngForm" 
+        class="form"
+        (ngSubmit)="f.form.valid && handleSubmit()"
+        >
+        <h3 class="legend">S'inscrire</h3>
+        <label for="pseudo" class="formControl">
+            <input 
+                type="text"
+                id="pseudo" 
+                required
+                minlength="5"
+                placeholder="Votre pseudo" 
+                [(ngModel)] = "form.pseudo" 
+                #pseudo="ngModel"
+                name="pseudo">
+        </label>
+        <label for="psw" class="formControl">
+            <input 
+                type="password" 
+                id="psw"
+                required
+                minlength="8"
+                placeholder="Votre mot de passe" 
+                [(ngModel)] = "form.psw" 
+                #psw="ngModel"
+                name="psw">
+        </label>
+        <div class="contentAction">
+            <button class="btn btn-primary">Validez</button>
+        </div>
+    </form>
+    <div class="indication">
+        <div *ngIf="psw.errors && f.submitted">
+            <p class="paragraph" *ngIf="psw.errors['required']">Le mot de passe est obligatoire.</p>
+            <p class="paragraph" *ngIf="psw.errors['minlength']">Le mot de passe doit avoir au moins 8 caractères.</p>
+        </div>
+        <div class="indication" *ngIf="pseudo.errors && f.submitted">
+            <p class="paragraph" *ngIf="pseudo.errors['required']">Ce champ est obligatoire.</p>
+            <p class="paragraph" *ngIf="pseudo.errors['minlength']">Ce champs doit avoir au moins 5 caractères.</p>
+        </div>
+    </div>
+</div>

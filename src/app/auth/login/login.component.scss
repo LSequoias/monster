@@ -1,0 +1,89 @@
+.wrap {
+    justify-content: flex-start;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #ccc;
+    border-radius: 2.5px;
+    margin: 2rem auto;
+}
+.wrap, .form {
+    display: flex;
+    width: 50%;
+}
+
+.form, .indication {
+    font-size: 1.2rem;
+}
+
+.form {
+    flex-direction: column;
+    justify-content: center;
+
+    & .legend {
+        letter-spacing: 1.5px;
+        font-size: 1.5rem;
+        margin: 0;
+        text-indent: 2rem;
+        padding: .5rem;
+        color: yellowgreen;
+        &::first-letter {
+            color: forestgreen;
+            font-size: calc(100% + .5rem);
+        }
+    }
+
+    &Control {
+        width: 80%;
+        input {
+            width: inherit;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid rgb(50, 146, 205);
+            color: #111;
+            line-height: 28px;
+            width: 80%;
+
+
+            &:valide {
+                border-color: yellowgreen;
+            }
+
+            &:invalid {
+                border-color: crimson;
+            }
+        }
+    }
+
+    .contentAction {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+    .btn {
+        padding: .4rem .8rem;
+        color: #ccc;
+        background-color: forestgreen;
+    }
+
+    &Control, .btn {
+        margin: 1.5rem;
+    }
+}
+
+.indication {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 2rem 0 0;
+
+    & .paragraph {
+        border-left: 2px solid crimson;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        box-shadow: 3px 3px 3px #ccc;
+
+        color: crimson;
+        padding: .25rem 1.5rem;
+    }
+}
