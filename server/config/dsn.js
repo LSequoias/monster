@@ -1,4 +1,4 @@
 module.exports = {
     // l'idéal serait un .env.local et .env.prod
-    url: "mongodb://localhost:27017/monster"
+    url: "j'ai oublier de config le gitignore bouh la honte.."
 }
