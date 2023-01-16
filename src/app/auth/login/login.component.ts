@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit {
       (err:any) => console.log(err)
     );
   }
-  // tmp passer 9h (cela inclus la doc, les cours et l'exo)
 
   /*get pseudo() :string|null {
     return this.form.pseudo;
