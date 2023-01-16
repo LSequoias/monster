@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
     <app-navigation></app-navigation>
     <router-outlet></router-outlet>
   `,
-  styles: [
-  ]
+  styleUrls: ['layout.component.scss']
 })
 export class LayoutComponent {
 

@@ -1,9 +1,18 @@
 <section class="wrap">
     <article class="card">
-        <h3 class="card-title">Bienvene sur ...</h3>
+        <h2 class="card-title">Bienvenue sur ...</h2>
         <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
              A minima unde deserunt dignissimos! Quis unde vero veniam reiciendis sed earum.
               Inventore vero, illum quod tempore maxime magnam magni. Nostrum, voluptas.</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, animi.</p>
     </article>
+    <article class="card" *ngFor="let hero of heros">
+        <h3 class="card-subtitle">{{hero.name}}</h3>
+        <figure class="card-media">
+            <img class="media" [src]="hero.media" [alt]="hero.mediaText" [title]="hero.mediaText">
+        </figure>
+        <h3 class="card-lasttitle">{{hero.role}}</h3>
+        <p class="paragraph">{{hero.desc}}</p>
+    </article>
 </section>
+

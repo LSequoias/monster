@@ -1,6 +1,7 @@
 @import '_var';
 
 .card {
+    box-sizing: border-box;
     margin: 2rem auto;
     padding: .5rem;
     border:1px #ccc solid;
@@ -8,11 +9,48 @@
     border-radius: 3.5px;
     width: 50%;
 
-    &-title {
-        font-size: $fs2;
-        text-align: center;
+    &-title, & .media {
         border: 1px solid #eef;
-        padding: 1rem;
+
+    }
+
+    &-title {
+        text-align: center;
+    }
+
+    &-subtitle {
+        border-top: 1px solid #eef;
+        border-left: 1px solid #eef;
+        border-right: 1px solid #eef;
+    }
+
+    &-lasttitle {
+        border-left: 1px solid #eef;
+        border-right: 1px solid #eef;
+    }
+
+    &-title, &-lasttitle, &-subtitle  {
+        text-indent: $fs3;
+        padding:1rem;
+        font-weight: 200;
+        letter-spacing: 1.5px;
         margin: 0;
+    }
+
+    &-media {
+        display: flex;
+        margin: 0;
+
+    }
+
+    & .media {
+        width: 100%;
+        height: auto;
+    }
+
+    @if paragraph {
+        .paragraph {
+            margin: 0 auto;
+        }
     }
 }

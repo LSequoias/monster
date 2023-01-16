@@ -1,7 +1,10 @@
 @import '_var';
 
 .banner {
-    background-color: #111;
+    background-color: #888;
+    width: 100%;
+    position: fixed;
+
 
     .content-navigation {
         display: flex;
@@ -16,7 +19,7 @@
 
 
         &-list {
-            padding: $fs3;
+            padding: $fs3 calc($fs3 * 2);
             transition: all .15s;
 
             &:hover {

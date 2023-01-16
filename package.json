@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:client": "ng serve",
+    "start:server": "nodemon -r dotenv/config server/server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "compodoc:gen" : "npx compodoc -p src/tsconfig.app.json",
-    "compodoc:read" : "npx compodoc -p src/tsconfig.app.json -s",
-    "compodoc:watch" : "npx compodoc -p src/tsconfig.app.json -s -w"
-
+    "compodoc:gen": "npx compodoc -p src/tsconfig.app.json",
+    "compodoc:read": "npx compodoc -p src/tsconfig.app.json -s",
+    "compodoc:watch": "npx compodoc -p src/tsconfig.app.json -s -w"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +22,11 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^6.8.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -31,6 +35,8 @@
     "@angular-devkit/build-angular": "^15.0.4",
     "@angular/cli": "~15.0.4",
     "@angular/compiler-cli": "^15.0.0",
+    "mongodb": "^4.13.0",
+    "nodemon": "^2.0.20",
     "typescript": "~4.8.2"
   }
 }

@@ -5,3 +5,7 @@ Voici l'énoncé:
 > (Inscription/Connexion/Déconnexion) du "Monstre" par login/mot de passe 
 > (Afficher/Modifier) son rôle (Guerrier, Alchimiste, Sorcier, Espions, Enchanteur)
 > (Ajouter/Supprimer) en amis un autre "Monstre" à partir d'une liste des autres Monstres inscrits.
+
+
+________
+## La partie Observable et Service m'est encore un peu obscur
